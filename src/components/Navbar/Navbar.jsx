@@ -1,11 +1,15 @@
 export default function Navbar() {
-
+  const navLinks =  <>
+                      <li><a className="btn btn-outline text-lg font-semibold border-[#23BE0A] text-[#23BE0A] hover:bg-[#23BE0A] hover:border-[#23BE0A]">Home</a></li>
+                      <li><a className="btn btn-outline text-lg font-semibold border-[#23BE0A] text-[#23BE0A] hover:bg-[#23BE0A] hover:border-[#23BE0A]">Listed Books</a></li>
+                      <li><a className="btn btn-outline text-lg font-semibold border-[#23BE0A] text-[#23BE0A] hover:bg-[#23BE0A] hover:border-[#23BE0A]">Pages to Read</a></li>
+                    </>
   return (
     <>
-      <div className="navbar bg-base-100">
-        <div className="navbar-start">
+      <div className="navbar bg-base-100 max-w-7xl mx-auto max-sm:flex-col md:flex-row justify-between gap-y-3">
+        <div className="navbar-start max-sm:w-fit gap-x-4">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn bg-[#23BE0A] text-white lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -21,37 +25,20 @@ export default function Navbar() {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><a>Item 1</a></li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
-              <li><a>Item 3</a></li>
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-3">
+              {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className=" text-3xl font-bold text-[#131313]">Book Bazar</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </details>
-            </li>
-            <li><a>Item 3</a></li>
+          <ul className="menu menu-horizontal px-1 gap-4">
+            {navLinks}
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-start lg:navbar-end  gap-4">
+          <a className="btn text-lg font-semibold text-white border-[#23BE0A] bg-[#23BE0A] hover:bg-transparent hover:text-[#23BE0A] hover:border-[#23BE0A]">Sign In</a>
+          <a className="btn text-lg font-semibold text-white border-[#23BE0A] bg-[#23BE0A] hover:bg-transparent hover:text-[#23BE0A] hover:border-[#23BE0A]">Sign Up</a>
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-import errorImg from '../../../assets/errorPage.png';
+import errorImg from '../../assets/errorPage.png';
 export default function ErrorPage() {
 
   return (
