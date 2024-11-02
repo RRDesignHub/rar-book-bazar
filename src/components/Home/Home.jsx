@@ -1,7 +1,11 @@
+import Books from "../Books/Books";
+import Hero from "../Hero/Hero";
+
 export default function Home() {
   return (
     <>
-      <h1>Main- Home</h1>
+      <Hero></Hero>
+      <Books></Books>
     </>
   )
 }
